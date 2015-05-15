@@ -63,13 +63,13 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dominio\BO\Cedula.vb" />
-    <Compile Include="Dominio\BO\CertificacionAltura.vb" />
-    <Compile Include="Dominio\BO\Estudios.vb" />
-    <Compile Include="Dominio\BO\InstitucionesEducativas.vb" />
+    <Compile Include="Dominio\VO\Cedula.vb" />
+    <Compile Include="Dominio\VO\CertificacionAltura.vb" />
+    <Compile Include="Dominio\VO\Estudios.vb" />
+    <Compile Include="Dominio\VO\InstitucionesEducativas.vb" />
     <Compile Include="Dominio\Empleado.vb" />
     <Compile Include="Dominio\Empresa.vb" />
-    <Compile Include="Dominio\Contacto.vb" />
+    <Compile Include="Dominio\Interfaces\Modelo\Contacto.vb" />
     <Compile Include="Dominio\HorarioLaboral.vb" />
     <Compile Include="Dominio\Interfaces\Modelo\ICertificacion.vb" />
     <Compile Include="Dominio\Interfaces\Modelo\IPersona.vb" />
