@@ -63,17 +63,31 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dominio\VO\Cedula.vb" />
-    <Compile Include="Dominio\VO\CertificacionAltura.vb" />
-    <Compile Include="Dominio\VO\Estudios.vb" />
-    <Compile Include="Dominio\VO\InstitucionesEducativas.vb" />
-    <Compile Include="Dominio\Empleado.vb" />
-    <Compile Include="Dominio\Empresa.vb" />
-    <Compile Include="Dominio\Interfaces\Modelo\Contacto.vb" />
-    <Compile Include="Dominio\HorarioLaboral.vb" />
-    <Compile Include="Dominio\Interfaces\Modelo\ICertificacion.vb" />
-    <Compile Include="Dominio\Interfaces\Modelo\IPersona.vb" />
-    <Compile Include="Dominio\Interfaces\Repositorio\IRepositorio.vb" />
+    <Compile Include="1. Dominio\Entidades\Cargo.vb" />
+    <Compile Include="1. Dominio\Entidades\Contacto.vb" />
+    <Compile Include="1. Dominio\Entidades\VO\ContactoCorreo.vb" />
+    <Compile Include="1. Dominio\Entidades\VO\ContactoTelefono.vb" />
+    <Compile Include="1. Dominio\Entidades\Empleado.vb" />
+    <Compile Include="1. Dominio\Entidades\VO\EmpleadoAdjuntoCertificacion.vb" />
+    <Compile Include="1. Dominio\Entidades\VO\EmpleadoAdjuntoEstudio.vb" />
+    <Compile Include="1. Dominio\Entidades\VO\EmpleadoCertificacion.vb" />
+    <Compile Include="1. Dominio\Entidades\VO\EmpleadoCorreo.vb" />
+    <Compile Include="1. Dominio\Entidades\VO\EmpleadoEmpresa.vb" />
+    <Compile Include="1. Dominio\Entidades\VO\EmpleadoEstudio.vb" />
+    <Compile Include="1. Dominio\Entidades\VO\EmpleadoTelefono.vb" />
+    <Compile Include="1. Dominio\Entidades\Empresa.vb" />
+    <Compile Include="1. Dominio\Entidades\VO\HorariosIO.vb" />
+    <Compile Include="1. Dominio\Entidades\VO\RH.vb" />
+    <Compile Include="1. Dominio\Entidades\Sede.vb" />
+    <Compile Include="1. Dominio\Entidades\VO\TipoCertificacion.vb" />
+    <Compile Include="1. Dominio\Entidades\VO\TipoContrato.vb" />
+    <Compile Include="1. Dominio\Interfaces\Repositorio\IRepositorio.vb" />
+    <Compile Include="2. Servicios\Implementaciones\EmpleadoService.vb" />
+    <Compile Include="2. Servicios\Interfaces\ICargoService.vb" />
+    <Compile Include="2. Servicios\Interfaces\IContactoService.vb" />
+    <Compile Include="2. Servicios\Interfaces\IEmpleadoService.vb" />
+    <Compile Include="2. Servicios\Interfaces\ISedeService.vb" />
+    <Compile Include="3. Excepciones\EmpleadoException.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -89,7 +103,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Servicios\Interfaces\ICrearEmpresa.vb" />
+    <Compile Include="2. Servicios\Interfaces\IEmpresaService.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -111,9 +125,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Excepciones\" />
+    <Folder Include="1. Dominio\Interfaces\Entidades\" />
     <Folder Include="Mensajes\" />
-    <Folder Include="Servicios\Implementaciones\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

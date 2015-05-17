@@ -48,14 +48,12 @@ Public Class BaseRepositorio(Of TEntity As Class)
         Return _Contexto.[Set](Of TEntity)()
     End Function
 
-
     Public Function Include(Of KProperty)(source As IQueryable(Of TEntity), path As Expressions.Expression(Of Func(Of TEntity, KProperty))) As IQueryable(Of TEntity)
+        Return Nothing
         'Dim source As IQueryable(Of TEntity)
         'Dim path As Expressions.Expression(Of Func(Of TEntity, KProperty))
         'Dim returnValue As IQueryable(Of TEntity)
         'returnValue = source.Include(path)
     End Function
-
-
 
 End Class

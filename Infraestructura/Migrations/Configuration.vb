@@ -6,14 +6,13 @@ Imports System.Linq
 Namespace Migrations
 
     Friend NotInheritable Class Configuration 
-        Inherits DbMigrationsConfiguration(Of EmpresasDBContext)
+        Inherits DbMigrationsConfiguration(Of EFContext)
 
         Public Sub New()
             AutomaticMigrationsEnabled = False
-            ContextKey = "Infraestructura.EmpresasDBContext"
         End Sub
 
-        Protected Overrides Sub Seed(context As EmpresasDBContext)
+        Protected Overrides Sub Seed(context As EFContext)
             '  This method will be called after migrating to the latest version.
 
             '  You can use the DbSet(Of T).AddOrUpdate() helper extension method 

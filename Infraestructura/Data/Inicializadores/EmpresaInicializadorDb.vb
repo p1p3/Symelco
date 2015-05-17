@@ -1,18 +1,38 @@
-﻿Public Class EmpresaInicializadorDb
-    Inherits System.Data.Entity.DropCreateDatabaseAlways(Of EmpresasDBContext)
-    Protected Overrides Sub Seed(context As EmpresasDBContext)
-        Dim oCedula As New Core.Cedula With {.NumeroCedula = 1037694695, .FechaExpedicion = Date.FromOADate(2008 / 7 / 5)}
+﻿Imports System.Data.Entity
 
-        context.Cedula.Add(oCedula)
-        Dim oPersonaContacto As New Core.Contacto With {.Cedula = oCedula, .Nombre = "Felipe Jaramillo Gómez", _
-                                                        .FechaNacimiento = Date.FromOADate(2001 / 7 / 5)}
+Public Class EmpresaInicializadorDb
+    Inherits System.Data.Entity.DropCreateDatabaseAlways(Of EFContext)
 
-        context.Contacto.Add(oPersonaContacto)
+    'Public Overrides Sub InitializeDatabase(context As EFContext)
+    '    context.Database.ExecuteSqlCommand(TransactionalBehavior.DoNotEnsureTransaction, String.Format("ALTER DATABASE {0} SET SINGLE_USER WITH ROLLBACK IMMEDIATE", context.Database.Connection.Database))
+    '    MyBase.InitializeDatabase(context)
+    'End Sub
 
-        Dim oEmpresa As New Core.Empresa With {.NIT = "123213-2", .Nombre = "Empresa1", .PersonaContacto = oPersonaContacto}
+    Protected Overrides Sub Seed(context As EFContext)
 
-        context.Empresas.Add(oEmpresa)
+        Dim oCargo As New Core.Cargo With {.Nombre = "CargoLoad", .Activo = True}
 
+        Dim oRH As New Core.RH With {.Nombre = "A+"}
+
+        Dim oTipoContrato As New Core.TipoContrato With {.Nombre = "Temporal", .Activo = True}
+
+        Dim oEmpleado As New Core.Empleado With {.Activo = True, .Cargo = oCargo, .Cedula = 123, .FechaNacimiento = Date.FromOADate(2001 / 7 / 5), _
+                                                 .RH = oRH, .TipoContrato = oTipoContrato}
+
+
+
+        'Dim oPersonaContacto As New Core.Contacto With {.Cedula = oCedula, .Nombre = "Felipe Jaramillo Gómez", _
+        '                                                .FechaNacimiento = Date.FromOADate(2001 / 7 / 5)}
+
+        'context.Contacto.Add(oPersonaContacto)
+
+        'Dim oEmpresa As New Core.Empresa With {.NIT = "123213-2", .Nombre = "Empresa1", .PersonaContacto = oPersonaContacto}
+
+        'context.Empresas.Add(oEmpresa)
+
+
+        context.Empleados.Add(oEmpleado)
         MyBase.Seed(context)
     End Sub
+
 End Class

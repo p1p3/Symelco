@@ -1,7 +1,6 @@
 ﻿Imports Core
-
-Public Class RepositorioEmpleado
-    Inherits BaseRepositorio(Of Empleado)
+Public Class RepositorioCargo
+    Inherits BaseRepositorio(Of Cargo)
 
     Public Sub New(ByVal dbContext As EFContext)
         MyBase.New(dbContext)

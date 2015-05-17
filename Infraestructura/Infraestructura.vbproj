@@ -71,12 +71,28 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\EmpresasDBContext.vb" />
+    <Compile Include="Data\EFContext.vb" />
     <Compile Include="Data\Inicializadores\EmpresaInicializadorDb.vb" />
-    <Compile Include="Migrations\201505101615445_InitialCreate.Designer.vb">
-      <DependentUpon>201505101615445_InitialCreate.vb</DependentUpon>
+    <Compile Include="Migrations\201505171524562_first.Designer.vb">
+      <DependentUpon>201505171524562_first.vb</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201505101615445_InitialCreate.vb" />
+    <Compile Include="Migrations\201505171524562_first.vb" />
+    <Compile Include="Migrations\201505171533029_second.Designer.vb">
+      <DependentUpon>201505171533029_second.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505171533029_second.vb" />
+    <Compile Include="Migrations\201505171533373_third.Designer.vb">
+      <DependentUpon>201505171533373_third.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505171533373_third.vb" />
+    <Compile Include="Migrations\201505171957137_cuarta.Designer.vb">
+      <DependentUpon>201505171957137_cuarta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505171957137_cuarta.vb" />
+    <Compile Include="Migrations\201505172303002_listas.Designer.vb">
+      <DependentUpon>201505172303002_listas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505172303002_listas.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -94,12 +110,25 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Repositorio\BaseRepositorio.vb" />
+    <Compile Include="Repositorio\RepositorioCargo.vb" />
     <Compile Include="Repositorio\RepositorioEmpleado.vb" />
     <Compile Include="Repositorio\RepositorioEmpresa.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201505101615445_InitialCreate.resx">
-      <DependentUpon>201505101615445_InitialCreate.vb</DependentUpon>
+    <EmbeddedResource Include="Migrations\201505171524562_first.resx">
+      <DependentUpon>201505171524562_first.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505171533029_second.resx">
+      <DependentUpon>201505171533029_second.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505171533373_third.resx">
+      <DependentUpon>201505171533373_third.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505171957137_cuarta.resx">
+      <DependentUpon>201505171957137_cuarta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505172303002_listas.resx">
+      <DependentUpon>201505172303002_listas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -109,7 +138,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

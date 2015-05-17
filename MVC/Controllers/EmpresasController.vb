@@ -97,7 +97,7 @@ Namespace Controllers
         <ValidateAntiForgeryToken()>
         Function DeleteConfirmed(ByVal id As Integer) As ActionResult
             Dim empresa As Empresa = db.FindById(id)
-            db.Remove(empresa.EmpresaId)
+            db.Remove(empresa.idEmpresa)
             Return RedirectToAction("Index")
         End Function
 
