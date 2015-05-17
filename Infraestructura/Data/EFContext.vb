@@ -30,10 +30,6 @@ Public Class EFContext
     Public Overridable Property TiposContratoes As DbSet(Of TipoContrato)
 
     Protected Overrides Sub OnModelCreating(ByVal modelBuilder As DbModelBuilder)
-        'modelBuilder.Entity(Of Cargo)() _
-        '    .HasMany(Function(e) e.Empleados) _
-        '    .WithRequired(Function(e) e.Cargo) _
-        '    .WillCascadeOnDelete(False)
 
         modelBuilder.Entity(Of Contacto)() _
             .HasMany(Function(e) e.Telefonos) _
@@ -85,10 +81,6 @@ Public Class EFContext
             .WithRequired(Function(e) e.Empresa) _
             .WillCascadeOnDelete(False)
 
-        'modelBuilder.Entity(Of RH)() _
-        '    .HasMany(Function(e) e.Empleados) _
-        '    .WithRequired(Function(e) e.RH) _
-        '    .WillCascadeOnDelete(False)
 
         modelBuilder.Entity(Of Sede)() _
             .HasMany(Function(e) e.Contactos) _
@@ -100,10 +92,7 @@ Public Class EFContext
             .WithRequired(Function(e) e.TipoCertificacion) _
             .WillCascadeOnDelete(False)
 
-        'modelBuilder.Entity(Of TipoContrato)() _
-        '    .HasMany(Function(e) e.Empleados) _
-        '    .WithRequired(Function(e) e.TipoContrato) _
-        '    .WillCascadeOnDelete(False)
+
     End Sub
 
 End Class

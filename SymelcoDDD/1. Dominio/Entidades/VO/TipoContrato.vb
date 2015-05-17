@@ -4,10 +4,6 @@ Imports System.ComponentModel.DataAnnotations
 Imports System.ComponentModel.DataAnnotations.Schema
 
 Partial Public Class TipoContrato
-    'Public Sub New()
-    '    Empleados = New HashSet(Of Empleado)()
-    'End Sub
-
     <Key>
     Public Property idTipoContrato As Integer
 
@@ -17,5 +13,4 @@ Partial Public Class TipoContrato
 
     Public Property Activo As Boolean
 
-    'Public Overridable Property Empleados As ICollection(Of Empleado)
 End Class
