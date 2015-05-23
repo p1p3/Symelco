@@ -29,11 +29,11 @@ Partial Public Class Empleado
 
     Public Overridable Property Cargo As Cargo
 
-    Public Overridable Property Certificaciones As ICollection(Of EmpleadoCertificacion)
-
     Public Overridable Property RH As RH
 
     Public Overridable Property TipoContrato As TipoContrato
+
+    Public Overridable Property Certificaciones As ICollection(Of EmpleadoCertificacion)
 
     Public Overridable Property Correos As ICollection(Of EmpleadoCorreo)
 
