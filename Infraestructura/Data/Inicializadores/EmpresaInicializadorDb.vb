@@ -16,9 +16,11 @@ Public Class EmpresaInicializadorDb
 
         Dim oTipoContrato As New Core.TipoContrato With {.Nombre = "Temporal", .Activo = True}
 
-        Dim oEmpleado As New Core.Empleado With {.Activo = True, .Cargo = oCargo, .Cedula = 123, .FechaNacimiento = Date.FromOADate(2001 / 7 / 5), _
+        Dim oEmpleado As New Core.Empleado With {.Nombre = "Empleado 1", .Activo = True, .Cargo = oCargo, .Cedula = 123, .FechaNacimiento = Date.FromOADate(2001 / 7 / 5), _
                                                  .RH = oRH, .TipoContrato = oTipoContrato}
 
+        Dim oEmpleado2 As New Core.Empleado With {.Nombre = "Empleado 2", .Activo = True, .Cargo = oCargo, .Cedula = 1234, .FechaNacimiento = Date.FromOADate(2001 / 7 / 5), _
+                                                .RH = oRH, .TipoContrato = oTipoContrato}
 
 
         'Dim oPersonaContacto As New Core.Contacto With {.Cedula = oCedula, .Nombre = "Felipe Jaramillo Gómez", _
@@ -32,6 +34,7 @@ Public Class EmpresaInicializadorDb
 
 
         context.Empleados.Add(oEmpleado)
+        context.Empleados.Add(oEmpleado2)
         MyBase.Seed(context)
     End Sub
 

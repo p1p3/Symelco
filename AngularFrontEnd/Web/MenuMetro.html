@@ -1,0 +1,247 @@
+﻿
+<div class="charm right-side padding20 bg-grayDark" id="charmSearch">
+    <button class="square-button bg-transparent fg-white no-border place-right small-button" onclick="showSearch()"><span class="mif-cross"></span></button>
+    <h1 class="text-light">Search</h1>
+    <hr class="thin">
+    <br>
+    <div class="input-control text full-size">
+        <label>
+            <span class="dropdown-toggle drop-marker-light">Anywhere</span>
+            <ul class="d-menu" data-role="dropdown">
+                <li><a onclick="setSearchPlace(this)">Anywhere</a></li>
+                <li><a onclick="setSearchPlace(this)">Options</a></li>
+                <li><a onclick="setSearchPlace(this)">Files</a></li>
+                <li><a onclick="setSearchPlace(this)">Internet</a></li>
+            </ul>
+        </label>
+        <input type="text">
+        <button class="button"><span class="mif-search"></span></button>
+    </div>
+</div>
+
+<div class="charm right-side padding20 bg-grayDark" id="charmSettings">
+    <button class="square-button bg-transparent fg-white no-border place-right small-button" onclick="showSettings()"><span class="mif-cross"></span></button>
+    <h1 class="text-light">Settings</h1>
+    <hr class="thin">
+    <br>
+    <div class="schemeButtons">
+        <div class="button square-button tile-area-scheme-dark" data-scheme="dark"></div>
+        <div class="button square-button tile-area-scheme-darkBrown" data-scheme="darkBrown"></div>
+        <div class="button square-button tile-area-scheme-darkCrimson" data-scheme="darkCrimson"></div>
+        <div class="button square-button tile-area-scheme-darkViolet" data-scheme="darkViolet"></div>
+        <div class="button square-button tile-area-scheme-darkMagenta" data-scheme="darkMagenta"></div>
+        <div class="button square-button tile-area-scheme-darkCyan" data-scheme="darkCyan"></div>
+        <div class="button square-button tile-area-scheme-darkCobalt" data-scheme="darkCobalt"></div>
+        <div class="button square-button tile-area-scheme-darkTeal" data-scheme="darkTeal"></div>
+        <div class="button square-button tile-area-scheme-darkEmerald" data-scheme="darkEmerald"></div>
+        <div class="button square-button tile-area-scheme-darkGreen" data-scheme="darkGreen"></div>
+        <div class="button square-button tile-area-scheme-darkOrange" data-scheme="darkOrange"></div>
+        <div class="button square-button tile-area-scheme-darkRed" data-scheme="darkRed"></div>
+        <div class="button square-button tile-area-scheme-darkPink" data-scheme="darkPink"></div>
+        <div class="button square-button tile-area-scheme-darkIndigo" data-scheme="darkIndigo"></div>
+        <div class="button square-button tile-area-scheme-darkBlue" data-scheme="darkBlue"></div>
+        <div class="button square-button tile-area-scheme-lightBlue" data-scheme="lightBlue"></div>
+        <div class="button square-button tile-area-scheme-lightTeal" data-scheme="lightTeal"></div>
+        <div class="button square-button tile-area-scheme-lightOlive" data-scheme="lightOlive"></div>
+        <div class="button square-button tile-area-scheme-lightOrange" data-scheme="lightOrange"></div>
+        <div class="button square-button tile-area-scheme-lightPink" data-scheme="lightPink"></div>
+        <div class="button square-button tile-area-scheme-grayed" data-scheme="grayed"></div>
+    </div>
+</div>
+
+<div class="tile-area fg-white tile-area-scheme-dark" style="width: 1920px;">
+    <h1 class="tile-area-title">Inicio</h1>
+    <div class="tile-area-controls">
+        <button class="image-button icon-right bg-transparent fg-white bg-hover-dark no-border"><span class="sub-header no-margin text-light">{{NombreUsuario}}</span> <span class="icon mif-user"></span></button>
+        <button class="square-button bg-transparent fg-white bg-hover-dark no-border" onclick="showSearch()"><span class="mif-search"></span></button>
+        <button class="square-button bg-transparent fg-white bg-hover-dark no-border" onclick="showSettings()"><span class="mif-cog"></span></button>
+        <a href="../tiles.html" class="square-button bg-transparent fg-white bg-hover-dark no-border"><span class="mif-switch"></span></a>
+    </div>
+
+    <div class="tile-group double" style="left: 0px;">
+        <span class="tile-group-title">Administración</span>
+
+        <div class="tile-container">
+
+
+            <a style="display:block" href="#/Empleados/1">
+                <div class="tile bg-green fg-white" data-role="tile" style="opacity: 1; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: 0.3s; transition: 0.3s;">
+                    <div class="tile-content iconic">
+                        <span class="icon mif-users"></span>
+                    </div>
+                    <span class="tile-label">Empleados</span>
+                </div>
+            </a>
+
+            <div class="tile bg-darkPink fg-white" data-role="tile" style="opacity: 1; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: 0.3s; transition: 0.3s;">
+                <div class="tile-content iconic">
+                    <span class="icon mif-truck"></span>
+                </div>
+                <span class="tile-label">Empresas</span>
+            </div>
+
+            <div class="tile-wide bg-steel fg-white" data-role="tile" style="opacity: 1; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: 0.3s; transition: 0.3s;">
+                <div class="tile-content iconic">
+                    <span class="icon mif-calendar"></span>
+                </div>
+                <span class="tile-label">Calendario</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="tile-group double" style="left: 0px;">
+        <span class="tile-group-title">Images</span>
+        <div class="tile-container">
+            <div class="tile-wide" data-role="tile" data-effect="slideLeft" style="opacity: 1; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: 0.3s; transition: 0.3s;">
+                <div class="tile-content">
+                    <div class="live-slide" style="left: -310px;"><div class="image-container image-format-fill" style="width: 100%; height: 100%;"><div class="frame"><div style="width: 100%; height: 100%; border-radius: 0px; background-image: url(http://metroui.org.ua/images/1.jpg); background-size: cover; background-repeat: no-repeat;"></div></div></div></div>
+                    <div class="live-slide" style="left: -310px; display: block;"><div class="image-container image-format-fill" style="width: 100%; height: 100%;"><div class="frame"><div style="width: 100%; height: 100%; border-radius: 0px; background-image: url(http://metroui.org.ua/images/2.jpg); background-size: cover; background-repeat: no-repeat;"></div></div></div></div>
+                    <div class="live-slide" style="left: -310px; display: block;"><div class="image-container image-format-fill" style="width: 100%; height: 100%;"><div class="frame"><div style="width: 100%; height: 100%; border-radius: 0px; background-image: url(http://metroui.org.ua/images/3.jpg); background-size: cover; background-repeat: no-repeat;"></div></div></div></div>
+                    <div class="live-slide" style="left: -310px; display: block;"><div class="image-container image-format-fill" style="width: 100%; height: 100%;"><div class="frame"><div style="width: 100%; height: 100%; border-radius: 0px; background-image: url(http://metroui.org.ua/images/4.jpg); background-size: cover; background-repeat: no-repeat;"></div></div></div></div>
+                    <div class="live-slide" style="left: 0px; display: block;"><div class="image-container image-format-fill" style="width: 100%; height: 100%;"><div class="frame"><div style="width: 100%; height: 100%; border-radius: 0px; background-image: url(http://metroui.org.ua/images/5.jpg); background-size: cover; background-repeat: no-repeat;"></div></div></div></div>
+                </div>
+                <div class="tile-label">Gallery</div>
+            </div>
+            <div class="tile" data-role="tile" data-effect="slideUpDown" style="opacity: 1; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: 0.3s; transition: 0.3s;">
+                <div class="tile-content">
+                    <div class="live-slide" style="top: 4.60018035398878px;"><div class="image-container image-format-fill" style="width: 100%; height: 100%;"><div class="frame"><div style="width: 100%; height: 100%; border-radius: 0px; background-image: url(http://metroui.org.ua/images/me.jpg); background-size: cover; background-repeat: no-repeat;"></div></div></div></div>
+                    <div class="live-slide" style="top: -145.399819646011px; display: block;"><div class="image-container image-format-fill" style="width: 100%; height: 100%;"><div class="frame"><div style="width: 100%; height: 100%; border-radius: 0px; background-image: url(http://metroui.org.ua/images/spface.jpg); background-size: cover; background-repeat: no-repeat;"></div></div></div></div>
+                </div>
+                <div class="tile-label">Photos</div>
+            </div>
+            <div class="tile-small bg-amber fg-white" data-role="tile" style="opacity: 1; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: 0.3s; transition: 0.3s;">
+                <div class="tile-content iconic">
+                    <span class="icon mif-video-camera"></span>
+                </div>
+            </div>
+            <div class="tile-small bg-green fg-white" data-role="tile" style="opacity: 1; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: 0.3s; transition: 0.3s;">
+                <div class="tile-content iconic">
+                    <span class="icon mif-gamepad"></span>
+                </div>
+            </div>
+            <div class="tile-small bg-pink fg-white" data-role="tile" style="opacity: 1; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: 0.3s; transition: 0.3s;">
+                <div class="tile-content iconic">
+                    <span class="icon mif-headphones"></span>
+                </div>
+            </div>
+            <div class="tile-small bg-yellow fg-white" data-role="tile" style="opacity: 1; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: 0.3s; transition: 0.3s;">
+                <div class="tile-content iconic">
+                    <span class="icon mif-lock"></span>
+                </div>
+            </div>
+
+            <div class="tile-wide bg-orange fg-white" data-role="tile" style="opacity: 1; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: 0.3s; transition: 0.3s;">
+                <div class="tile-content image-set">
+                    <img>
+                    <img>
+                    <img>
+                    <img>
+                    <img>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="tile-group one" style="left: 0px;">
+        <span class="tile-group-title">Office</span>
+
+        <div class="tile-small bg-blue" data-role="tile" style="opacity: 1; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: 0.3s; transition: 0.3s;">
+            <div class="tile-content iconic">
+                <img class="icon">
+            </div>
+        </div>
+        <div class="tile-small bg-darkBlue" data-role="tile" style="opacity: 1; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: 0.3s; transition: 0.3s;">
+            <div class="tile-content iconic">
+                <img class="icon">
+            </div>
+        </div>
+        <div class="tile-small bg-green" data-role="tile" style="opacity: 1; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: 0.3s; transition: 0.3s;">
+            <div class="tile-content iconic">
+                <img class="icon">
+            </div>
+        </div>
+        <div class="tile-small bg-red" data-role="tile" style="opacity: 1; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: 0.3s; transition: 0.3s;">
+            <div class="tile-content iconic">
+                <img class="icon">
+            </div>
+        </div>
+        <div class="tile-small bg-orange" data-role="tile" style="opacity: 1; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: 0.3s; transition: 0.3s;">
+            <div class="tile-content iconic">
+                <img class="icon">
+            </div>
+        </div>
+    </div>
+
+    <div class="tile-group double" style="left: 0px;">
+        <span class="tile-group-title">Games</span>
+        <div class="tile-container">
+            <div class="tile" data-role="tile" style="opacity: 1; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: 0.3s; transition: 0.3s;">
+                <div class="tile-content">
+
+                    <div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 150px; border-radius: 0px; background-image: url(http://metroui.org.ua/images/grid2.jpg); background-size: cover; background-repeat: no-repeat;"></div></div></div>
+                </div>
+            </div>
+            <div class="tile-small" data-role="tile" style="opacity: 1; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: 0.3s; transition: 0.3s;">
+                <div class="tile-content">
+
+                    <div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 70px; border-radius: 0px; background-image: url(http://metroui.org.ua/images/Battlefield_4_Icon.png); background-size: cover; background-repeat: no-repeat;"></div></div></div>
+                </div>
+            </div>
+            <div class="tile-small" data-role="tile" style="opacity: 1; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: 0.3s; transition: 0.3s;">
+                <div class="tile-content">
+
+                    <div class="image-container image-format-square" style="width: 100%;"><div class="frame bg-steel"><div style="width: 100%; height: 70px; border-radius: 0px; background-image: url(http://metroui.org.ua/images/Crysis-2-icon.png); background-size: cover; background-repeat: no-repeat;"></div></div></div>
+                </div>
+            </div>
+            <div class="tile-small" data-role="tile" style="opacity: 1; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: 0.3s; transition: 0.3s;">
+                <div class="tile-content">
+
+                    <div class="image-container image-format-square" style="width: 100%;"><div class="frame bg-dark"><div style="width: 100%; height: 70px; border-radius: 0px; background-image: url(http://metroui.org.ua/images/WorldofTanks.png); background-size: cover; background-repeat: no-repeat;"></div></div></div>
+                </div>
+            </div>
+            <div class="tile-small" data-role="tile" style="opacity: 1; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: 0.3s; transition: 0.3s;">
+                <div class="tile-content">
+
+                    <div class="image-container image-format-square" style="width: 100%;"><div class="frame"><div style="width: 100%; height: 70px; border-radius: 0px; background-image: url(http://metroui.org.ua/images/halo.jpg); background-size: cover; background-repeat: no-repeat;"></div></div></div>
+                </div>
+            </div>
+            <div class="tile-wide bg-green fg-white" data-role="tile" style="opacity: 1; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: 0.3s; transition: 0.3s;">
+                <div class="tile-content iconic">
+                    <img class="icon">
+                </div>
+                <div class="tile-label">X-Box Live</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tile-group double" style="left: 0px;">
+        <span class="tile-group-title">Other</span>
+        <div class="tile-container">
+            <div class="tile bg-teal fg-white" data-role="tile" style="opacity: 1; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: 0.3s; transition: 0.3s;">
+                <div class="tile-content iconic">
+                    <span class="icon mif-pencil"></span>
+                </div>
+                <span class="tile-label">Editor</span>
+            </div>
+            <div class="tile bg-darkGreen fg-white" data-role="tile" style="opacity: 1; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: 0.3s; transition: 0.3s;">
+                <div class="tile-content iconic">
+                    <span class="icon mif-shopping-basket"></span>
+                </div>
+                <span class="tile-label">Store</span>
+            </div>
+            <div class="tile bg-cyan fg-white" data-role="tile" style="opacity: 1; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: 0.3s; transition: 0.3s;">
+                <div class="tile-content iconic">
+                    <span class="icon mif-skype"></span>
+                </div>
+                <div class="tile-label">Skype</div>
+            </div>
+            <div class="tile bg-darkBlue fg-white" data-role="tile" style="opacity: 1; -webkit-transform: scale(1); transform: scale(1); -webkit-transition: 0.3s; transition: 0.3s;">
+                <div class="tile-content iconic">
+                    <span class="icon mif-cloud"></span>
+                </div>
+                <span class="tile-label">OneDrive</span>
+            </div>
+        </div>
+    </div>
+</div>

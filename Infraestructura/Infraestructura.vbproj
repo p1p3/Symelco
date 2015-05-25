@@ -93,6 +93,10 @@
       <DependentUpon>201505172303002_listas.vb</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201505172303002_listas.vb" />
+    <Compile Include="Migrations\201505241238148_Creacion-nombre-empleado.Designer.vb">
+      <DependentUpon>201505241238148_Creacion-nombre-empleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505241238148_Creacion-nombre-empleado.vb" />
     <Compile Include="Migrations\Configuration.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -129,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201505172303002_listas.resx">
       <DependentUpon>201505172303002_listas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505241238148_Creacion-nombre-empleado.resx">
+      <DependentUpon>201505241238148_Creacion-nombre-empleado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

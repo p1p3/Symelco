@@ -1,15 +1,15 @@
 ﻿Public Class EmpleadoService
     Implements IEmpleadoService
-    Private repoEmpleado As IRepositorio(Of Empleado)
+    Private RepositorioEmpleado As IRepositorio(Of Empleado)
 
-    Public Sub New(ByVal repo As IRepositorio(Of Empleado))
-        Me.repoEmpleado = repo
+    Public Sub New(ByVal Repositorio As IRepositorio(Of Empleado))
+        Me.RepositorioEmpleado = Repositorio
     End Sub
 
-    Public Sub Add(Empleado As Empleado)
+    Public Sub CrearEmpleado(Empleado As Empleado) Implements IEmpleadoService.CrearEmpleado
         If Empleado.isValid() Then
             Try
-                Me.repoEmpleado.Add(Empleado)
+                Me.RepositorioEmpleado.Add(Empleado)
             Catch ex As Exception
                 Throw ex
             End Try
@@ -18,12 +18,15 @@
         End If
     End Sub
 
-    Public Function FindById(id As Integer) As Empleado
-        Return repoEmpleado.FindById(id)
+
+    Public Function EncontrarPorId(id As Integer) As Empleado Implements IEmpleadoService.EncontrarPorId
+        Return RepositorioEmpleado.FindById(id)
     End Function
 
-    Public Function GetAll() As IEnumerable(Of Empleado)
-        Return repoEmpleado.GetAll()
+    Public Function ObtenerTodos() As IEnumerable(Of Empleado) Implements IEmpleadoService.ObtenerTodos
+        Return RepositorioEmpleado.GetAll()
     End Function
+
+
 
 End Class

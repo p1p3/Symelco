@@ -1,0 +1,20 @@
+﻿<div class="table-responsive" ng-controller="EmpleadosListar as ConEmp">
+    <table class="table table-condensed">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Cédula</th>
+                <th>Cargo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="Empleado in ConEmp.Empleados">
+                <td>{{Empleado.Nombre}}</td>
+                <td>{{Empleado.Cedula}}</td>
+                <td>{{Empleado.Cargo.Nombre}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+

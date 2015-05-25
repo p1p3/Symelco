@@ -120,6 +120,7 @@
     <Compile Include="App_Start\WebApiConfig.vb" />
     <Compile Include="Controllers\Dependency\UnityResolver.vb" />
     <Compile Include="Controllers\EmpleadoController.vb" />
+    <Compile Include="Extension\HttpRequestMessageExtensions.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

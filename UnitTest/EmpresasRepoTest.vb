@@ -24,7 +24,7 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
         Dim NumeroEmpleados = resultadoEmpleado.ToList().Count
         Dim NumeroCargo = resultadoCargo.ToList().Count
 
-        Assert.AreEqual(2, NumeroEmpleados + NumeroCargo)
+        Assert.AreEqual(3, NumeroEmpleados + NumeroCargo)
         repoEmpleado.Dispose()
     End Sub
 

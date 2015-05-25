@@ -7,16 +7,17 @@ Public Class EmpleadoService
     Implements IEmpleadoService
 
     Public Function GetEmpleado(EmpleadoId As String) As String Implements IEmpleadoService.GetEmpleado
-        Dim UnityContainer As New UnityContainer
-        UnityContainer.RegisterType(Of Core.IRepositorio(Of Core.Empleado), Infraestructura.RepositorioEmpleado)()
-        UnityContainer.RegisterType(Of Core.IEmpleadoService, Core.EmpleadoService)()
-        Dim servicioEmpleado = UnityContainer.Resolve(Of Core.EmpleadoService)()
-        Dim oEmpleado As Core.Empleado = servicioEmpleado.FindById(EmpleadoId)
+        'Dim UnityContainer As New UnityContainer
+        'UnityContainer.RegisterType(Of Core.IRepositorio(Of Core.Empleado), Infraestructura.RepositorioEmpleado)()
+        'UnityContainer.RegisterType(Of Core.IEmpleadoService, Core.EmpleadoService)()
+        'Dim servicioEmpleado = UnityContainer.Resolve(Of Core.EmpleadoService)()
+        'Dim oEmpleado As Core.Empleado = servicioEmpleado.FindById(EmpleadoId)
         'oEmpleado.Cargo.Empleados = Nothing
         'oEmpleado.RH.Empleados = Nothing
         'oEmpleado.TipoContrato.Empleados = Nothing
 
-        Return JsonConvert.SerializeObject(oEmpleado)
+        'Return JsonConvert.SerializeObject(oEmpleado)
+        Return Nothing
     End Function
 
 End Class

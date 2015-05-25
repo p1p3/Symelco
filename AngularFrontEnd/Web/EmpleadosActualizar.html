@@ -1,0 +1,74 @@
+﻿<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#/home">Inicio</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#/home">Link <span class="sr-only">(current)</span></a></li>
+                <li><a href="#/home">Link</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div ng-controller="EmpleadosActualizar as emp" class="container-fluid">
+    <h1>Empleado</h1>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="exampleInputEmil1" class="col-sm-2 control-label">Nombre</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="exampleInputEmil1" placeholder="Cédula" value="{{emp.Empleado.Nombre}}">
+            </div>
+            <label for="exampleInputEmail1" class="col-sm-2 control-label">Cédula</label>
+            <div class="col-sm-4">
+                <input type="number" class="form-control" id="exampleInputEmil1" placeholder="Cédula" value="{{emp.Empleado.Cedula}}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1" class="col-sm-2 control-label">Cargo</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="examplInputPassw1" placeholder="Cargo" value="{{emp.Empleado.Cargo.Nombre}}">
+            </div>
+            <label for="exampleInputPassword1" class="col-sm-2 control-label">Tipo de contrato</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="exampleInutPassword1" placeholder="Tipo de contrato" value="{{emp.Empleado.TipoContrato.Nombre}}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1" class="col-sm-2 control-label">RH</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="TipoSangreid" placeholder="RH" value="{{emp.Empleado.RH.Nombre}}">
+            </div>
+            <label for="exampleInputPassword1" class="col-sm-2 control-label">Fecha de nacimiento</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="TipoSangreid" placeholder="1990/90/90" value="{{emp.Empleado.FechaNacimiento}}">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputPassword1" class="col-sm-2 control-label">Activo</label>
+            <div class="col-sm-3">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" ng-checked="emp.Empleado.Activo"> Sí
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-2">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <title>Symelco ingeniería y servicios S.A</title>
+
+    <script src="../Scripts/jquery-2.1.4.js"></script>
+    <script src="../Bootstrap/js/bootstrap.js"></script>
+    <link href="../Bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/metro.css" rel="stylesheet" />
+    <link href="../Content/metro-icons.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-2.1.4.js"></script>
+    <script src="../Scripts/metro.js"></script>
+    <script src="../Scripts/MetroIndex.js"></script>
+    <script src="../Angular/angular.js"></script>
+    <script src="../Angular/angular-route.js"></script>
+    <script src="../Angular/app.js"></script>
+    <script src="../Angular/Modules/EmpleadosMod.js"></script>
+    <style>
+        .tile-area-controls {
+            position: fixed;
+            right: 40px;
+            top: 40px;
+        }
+
+        .tile-group {
+            left: 100px;
+        }
+
+        .tile, .tile-small, .tile-sqaure, .tile-wide, .tile-large, .tile-big, .tile-super {
+            opacity: 0;
+            -webkit-transform: scale(.8);
+            transform: scale(.8);
+        }
+
+        .charm.right-side {
+            width: 300px;
+            right: -300px;
+        }
+
+        #charmSettings .button {
+            margin: 5px;
+        }
+
+        @media screen and (max-width: 640px) {
+            .tile-area {
+                overflow-y: scroll;
+            }
+
+            .tile-area-controls {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 320px) {
+            .tile-area {
+                overflow-y: scroll;
+            }
+
+            .tile-area-controls {
+                display: none;
+            }
+        }
+    </style>
+
+</head>
+<body ng-app="Symelco">
+    <div ng-view style="  height: 100%;"></div>
+</body>
+</html>

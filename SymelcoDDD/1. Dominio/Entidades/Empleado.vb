@@ -17,6 +17,8 @@ Partial Public Class Empleado
     <Column(TypeName:="smalldatetime")>
     Public Property FechaNacimiento As Date
 
+    Public Property Nombre As String
+
     Public Property idRH As Integer
 
     Public Property idCargo As Integer
