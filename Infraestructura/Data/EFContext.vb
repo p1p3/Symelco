@@ -2,9 +2,10 @@ Imports System
 Imports System.Data.Entity
 Imports System.Linq
 Imports Core
+Imports Microsoft.AspNet.Identity.EntityFramework
 
 Public Class EFContext
-    Inherits DbContext
+    Inherits IdentityDbContext(Of Core.Usuario)
 
     Public Sub New()
         MyBase.New("name=Sql2012Pruebas")
@@ -30,6 +31,7 @@ Public Class EFContext
     Public Overridable Property TiposContratoes As DbSet(Of TipoContrato)
 
     Protected Overrides Sub OnModelCreating(ByVal modelBuilder As DbModelBuilder)
+        MyBase.OnModelCreating(modelBuilder)
 
         modelBuilder.Entity(Of Contacto)() _
             .HasMany(Function(e) e.Telefonos) _
