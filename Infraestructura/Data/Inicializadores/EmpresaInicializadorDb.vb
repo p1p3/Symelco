@@ -1,4 +1,6 @@
 ﻿Imports System.Data.Entity
+Imports Microsoft.AspNet.Identity
+Imports Microsoft.AspNet.Identity.EntityFramework
 
 Public Class EmpresaInicializadorDb
     Inherits System.Data.Entity.DropCreateDatabaseAlways(Of EFContext)
@@ -22,6 +24,15 @@ Public Class EmpresaInicializadorDb
         Dim oEmpleado2 As New Core.Empleado With {.Nombre = "Empleado 2", .Activo = True, .Cargo = oCargo, .Cedula = 1234, .FechaNacimiento = Date.FromOADate(2001 / 7 / 5), _
                                                 .RH = oRH, .TipoContrato = oTipoContrato}
 
+
+
+        Dim oUsuario As New Core.Usuario With {.UserName = "SuperPowerUser", .Email = "taiseer.joudeh@mymail.com", .EmailConfirmed = True, _
+                                         .FirstName = "Felipe", .LastName = "Jaramillo", .Level = 1, .JoinDate = DateTime.Now.AddYears(-3)}
+
+
+        Dim manager = New UserManager(Of Core.Usuario)(New UserStore(Of Core.Usuario)(New EFContext))
+
+        manager.Create(oUsuario, "MySuperP@ssword!")
 
         'Dim oPersonaContacto As New Core.Contacto With {.Cedula = oCedula, .Nombre = "Felipe Jaramillo Gómez", _
         '                                                .FechaNacimiento = Date.FromOADate(2001 / 7 / 5)}

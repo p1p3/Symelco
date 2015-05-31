@@ -95,11 +95,14 @@
     <Compile Include="1. Dominio\Entidades\VO\TipoCertificacion.vb" />
     <Compile Include="1. Dominio\Entidades\VO\TipoContrato.vb" />
     <Compile Include="1. Dominio\Interfaces\Repositorio\IRepositorio.vb" />
+    <Compile Include="1. Dominio\Interfaces\Repositorio\IUsuarioRepo.vb" />
     <Compile Include="2. Servicios\Implementaciones\EmpleadoService.vb" />
+    <Compile Include="2. Servicios\Implementaciones\UsariosService.vb" />
     <Compile Include="2. Servicios\Interfaces\ICargoService.vb" />
     <Compile Include="2. Servicios\Interfaces\IContactoService.vb" />
     <Compile Include="2. Servicios\Interfaces\IEmpleadoService.vb" />
     <Compile Include="2. Servicios\Interfaces\ISedeService.vb" />
+    <Compile Include="2. Servicios\Interfaces\IUsuarioService.vb" />
     <Compile Include="3. Excepciones\EmpleadoException.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
